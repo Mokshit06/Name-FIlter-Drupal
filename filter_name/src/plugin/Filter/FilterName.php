@@ -1,9 +1,12 @@
 <?php
+
 namespace Drupal\filter_name\Plugin\Filter;
+
 use Drupal\filter\FilterProcessResult;
 use Drupal\filter\Plugin\FilterBase;
+
 /**
- * Replaces "[name:FIRSTNAME:LASTNAME"] with "Name:LASTNAME FIRSTNAME"
+ * Replaces "[name:FIRSTNAME:LASTNAME"] with "Name:LASTNAME FIRSTNAME".
  *
  * @Filter(
  *   id = "filter_name",
@@ -13,6 +16,7 @@ use Drupal\filter\Plugin\FilterBase;
  * )
  */
 class FilterName extends FilterBase {
+
   /**
    * {@inheritdoc}
    */
@@ -24,4 +28,5 @@ class FilterName extends FilterBase {
     $new_text = preg_replace($regex, $replacement, $text);
     return new FilterProcessResult($new_text);
   }
+
 }
