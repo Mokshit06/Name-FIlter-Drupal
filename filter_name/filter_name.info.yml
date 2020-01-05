@@ -1,0 +1,5 @@
+name: Name Rearranging Filter
+description: This filter rearranges the format in which name is diplayed.
+type: module
+package: custom
+core: 8.x
