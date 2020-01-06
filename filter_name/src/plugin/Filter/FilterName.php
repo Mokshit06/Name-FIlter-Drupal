@@ -23,9 +23,9 @@ class FilterName extends FilterBase {
   public function process($text, $langcode) {
     // Detects pattern using Regular Expression.
     $regex = '/\[name\:(\w+)\:(\w+)\]/';
-    $replacement = "Name: " . '$2 $1';
+    $replace = "Name: " . '$2 $1';
     // Replaces the text using RegEx and returns the new text formed.
-    $new_text = preg_replace($regex, $replacement, $text);
+    $new_text = preg_replace($regex, $replace, $text);
     return new FilterProcessResult($new_text);
   }
 
